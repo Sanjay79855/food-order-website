@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Foodie - Online Food Ordering</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+
+            <div class="logo">
+                🍔 Foodie
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="cart-btn" onclick="toggleCart()">
+    🛒 Cart <span id="cart-count">0</span>
+</button>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="small-title">
+                FAST • FRESH • DELICIOUS
+            </p>
+
+            <h1>
+                Delicious Food
+                <span>Delivered</span>
+                To Your Door
+            </h1>
+            <div class="hero-image">
+    <img src="images/pizza.jpg" alt="Delicious Pizza">
+</div>
+
+            <p>
+                Order your favorite meals from our restaurant
+                and enjoy fresh food delivered directly to your home.
+            </p>
+
+            <a href="#menu" class="order-btn">
+                Order Now
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+
+        <p class="section-title">
+            OUR MENU
+        </p>
+
+        <h2>
+            Popular Dishes
+        </h2>
+        <!-- Search Bar -->
+<div class="search-box">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search your favorite food..."
+        onkeyup="searchFood()">
+</div>
+
+<!-- Categories -->
+<div class="categories">
+
+    <button onclick="filterFood('all')">All</button>
+    <button onclick="filterFood('pizza')">Pizza</button>
+    <button onclick="filterFood('burger')">Burger</button>
+    <button onclick="filterFood('noodles')">Noodles</button>
+    <button onclick="filterFood('chicken')">Chicken</button>
+
+</div>
+        <!-- Search Bar -->
+<div class="search-box">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search your favorite food..."
+        onkeyup="searchFood()">
+</div>
+
+<!-- Categories -->
+<div class="categories">
+
+    <button onclick="filterFood('all')">
+        All
+    </button>
+
+    <button onclick="filterFood('pizza')">
+        Pizza
+    </button>
+
+    <button onclick="filterFood('burger')">
+        Burger
+    </button>
+
+    <button onclick="filterFood('noodles')">
+        Noodles
+    </button>
+
+    <button onclick="filterFood('chicken')">
+        Chicken
+    </button>
+
+</div>
+
+        <div class="food-container">
+
+           <!-- Food Card 1 -->
+<div class="food-card pizza">
+
+    <div class="food-image">
+        <img src="./images/pizza.jpg" alt="Pizza">
+    </div>
+
+    <h3>Pizza</h3>
+
+    <p>
+        Cheese pizza with fresh vegetables.
+    </p>
+
+    <div class="food-bottom">
+
+        <strong>₹299</strong>
+
+        <button onclick="addToCart('Pizza', 299)">
+            Add to Cart
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- Food Card 2 -->
+<div class="food-card burger">
+
+    <div class="food-image">
+    <img src="./images/burger.jpg" alt="Burger">
+</div>
+
+    <h3>Burger</h3>
+
+    <p>
+        Juicy burger with fresh vegetables.
+    </p>
+
+    <div class="food-bottom">
+
+        <strong>₹199</strong>
+
+        <button onclick="addToCart('Burger', 199)">
+            Add to Cart
+        </button>
+
+    </div>
+
+</div>
+
+
+            
+
+
+            <!-- Food Card 3 -->
+            <div class="food-card noodles">
+
+                <div class="food-image">
+    <img src="./images/noodles.jpg" alt="Noodles">
+</div>
+                <h3>Noodles</h3>
+
+                <p>
+                    Delicious spicy vegetable noodles.
+                </p>
+
+                <div class="food-bottom">
+
+                    <strong>₹149</strong>
+
+                    <button onclick="addToCart('Noodles', 149)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Food Card 4 -->
+            <div class="food-card chicken">
+
+                <div class="food-image">
+    <img src="./images/chicken.jpg" alt="Chicken">
+</div>
+
+                <h3>Chicken</h3>
+
+                <p>
+                    Crispy and delicious chicken.
+                </p>
+
+                <div class="food-bottom">
+
+                    <strong>₹249</strong>
+
+                    <button onclick="addToCart('Chicken', 249)">
+                        Add to Cart
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+
+        <p class="section-title">
+            ABOUT US
+        </p>
+
+        <h2>
+            Fresh Food. Happy Customers.
+        </h2>
+
+        <p>
+            Foodie is a simple online food ordering website created
+            as a web development project. Our goal is to provide
+            users with a simple and convenient food ordering experience.
+        </p>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+
+        <p class="section-title">
+            CONTACT
+        </p>
+
+        <h2>
+            Get In Touch
+        </h2>
+
+        <p>
+            Email: foodie@example.com
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Foodie. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+    <!-- Cart Sidebar -->
+
+<div id="cart-sidebar" class="cart-sidebar">
+
+    <div class="cart-header">
+
+        <h2>🛒 Your Cart</h2>
+
+        <button onclick="closeCart()">✕</button>
+
+    </div>
+
+    <div id="cart-items" class="cart-items">
+
+        <p class="empty-cart">
+            Your cart is empty.
+        </p>
+
+    </div>
+
+    <div class="cart-footer">
+
+        <h3>
+            Total:
+            ₹<span id="cart-total">0</span>
+        </h3>
+
+        <button class="checkout-btn" onclick="openOrderForm()">
+    Checkout
+</button>
+
+    </div>
+
+</div>
+<!-- =========================
+     ORDER FORM
+========================= -->
+
+<div id="order-modal" class="order-modal">
+
+    <div class="order-form">
+
+        <div class="order-header">
+            <h2>Complete Your Order</h2>
+
+            <button onclick="closeOrderForm()">✕</button>
+        </div>
+
+        <form id="order-form">
+
+            <label for="customer-name">
+                Customer Name
+            </label>
+
+            <input
+                type="text"
+                id="customer-name"
+                placeholder="Enter your name"
+                required
+            >
+
+            <label for="customer-phone">
+                Phone Number
+            </label>
+
+            <input
+                type="tel"
+                id="customer-phone"
+                placeholder="Enter phone number"
+                required
+            >
+
+            <label for="customer-address">
+                Delivery Address
+            </label>
+
+            <textarea
+                id="customer-address"
+                placeholder="Enter your complete address"
+                required
+            ></textarea>
+
+            <label for="customer-city">
+                City
+            </label>
+
+            <input
+                type="text"
+                id="customer-city"
+                placeholder="Enter your city"
+                required
+            >
+
+            <label>
+                Payment Method
+            </label>
+
+            <div class="payment-options">
+
+                <label>
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="Cash on Delivery"
+                        checked
+                    >
+                    Cash on Delivery
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="payment"
+                        value="UPI"
+                    >
+                    UPI
+                </label>
+
+            </div>
+
+            <div class="order-total">
+                <span>Order Total</span>
+
+                <strong>
+                    ₹<span id="order-total">0</span>
+                </strong>
+            </div>
+
+            <button
+                type="submit"
+                class="place-order-btn"
+            >
+                Place Order
+            </button>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+</body>
+
+
+</html>
