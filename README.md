@@ -116,7 +116,8 @@ https://sanjay79855.github.io/food-order-website/
 ## 📸 Screenshots
 
 ## 📸 Screenshots
-
+### 🛒 Shopping Cart
+![Foodie Shopping Cart](images/cart.png.png)
 ### 🏠 Home Page
 ![Foodie Home Page](images/home.png.png)
 
