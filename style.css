@@ -1027,3 +1027,338 @@ footer {
 .food-bottom {
     margin-top: auto;
 }
+/* ===============================
+   PROFESSIONAL ANIMATIONS
+================================ */
+
+.food-card {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.food-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(255, 68, 68, 0.20);
+}
+
+.food-card img {
+    transition: transform 0.4s ease;
+}
+
+.food-card:hover img {
+    transform: scale(1.05);
+}
+
+button,
+.order-btn {
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+button:hover,
+.order-btn:hover {
+    transform: translateY(-2px);
+}
+
+.food-bottom button:hover {
+    box-shadow: 0 8px 20px rgba(255, 68, 68, 0.35);
+}
+
+.hero-image img {
+    transition: transform 0.5s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.04);
+}
+
+.nav-links a {
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #ff4d4d;
+}
+
+.cart-btn:hover {
+    box-shadow: 0 8px 20px rgba(255, 68, 68, 0.35);
+}
+/* ===============================
+   MOBILE RESPONSIVE DESIGN
+================================ */
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    .navbar {
+        padding: 15px 25px;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .hero-content {
+        padding: 40px 25px;
+    }
+
+    .food-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    /* Navigation */
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .cart-btn {
+        width: 100%;
+    }
+
+
+    /* Hero */
+    .hero {
+        padding: 50px 15px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+        line-height: 1.2;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 350px;
+    }
+
+
+    /* Menu */
+    .menu-section {
+        padding: 50px 15px;
+    }
+
+    .menu-section h2 {
+        font-size: 30px;
+    }
+
+
+    /* Search */
+    .search-box input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* Categories */
+    .categories {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+
+    /* Food cards */
+    .food-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .food-card {
+        width: 100%;
+    }
+
+
+    /* Cart */
+    .cart-sidebar {
+        width: 100%;
+        max-width: 100%;
+    }
+
+
+    /* Order form */
+    .order-modal {
+        padding: 15px;
+    }
+
+    .order-form {
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+}
+/* ===============================
+   FOOD CARD ENHANCEMENTS
+================================ */
+
+.food-card {
+    position: relative;
+}
+
+.food-badge {
+    display: inline-block;
+
+    margin-top: 12px;
+    margin-bottom: 8px;
+
+    padding: 5px 10px;
+
+    background: #ff4b3e;
+    color: white;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    border-radius: 20px;
+
+    width: fit-content;
+}
+
+.food-rating {
+    margin-bottom: 10px;
+
+    font-size: 14px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.food-rating span {
+    color: #aaa;
+    font-size: 13px;
+}
+/* ===============================
+   FAVORITE BUTTON
+================================ */
+
+.favorite-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    font-size: 22px;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.1);
+}
+
+.favorite-btn.active {
+    color: #ff4b4b;
+    background: #fff0f0;
+}
+/* ===============================
+   FAVORITE BUTTON
+================================ */
+
+.favorite-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: white;
+    color: #555;
+
+    font-size: 24px;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.1);
+}
+
+.favorite-btn.active {
+    color: red !important;
+    background: #ffe5e5;
+}/* ===============================
+   CART SIDEBAR ANIMATION
+================================ */
+
+.cart-sidebar {
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease;
+}
+
+.cart-sidebar.active {
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Cart items animation */
+.cart-item {
+    animation: cartItemIn 0.3s ease;
+}
+
+@keyframes cartItemIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Quantity buttons */
+.quantity-controls button {
+    transition: transform 0.2s ease,
+                background 0.2s ease;
+}
+
+.quantity-controls button:hover {
+    transform: scale(1.1);
+}
+
+/* Remove button */
+.remove-btn {
+    transition: transform 0.2s ease;
+}
+
+.remove-btn:hover {
+    transform: scale(1.15);
+}
