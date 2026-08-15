@@ -115,17 +115,16 @@ https://sanjay79855.github.io/food-order-website/
 
 ## 📸 Screenshots
 
+## 📸 Screenshots
+
 ### 🏠 Home Page
-![Foodie Home Page](images/home.png)
+![Foodie Home Page](images/home.png.png)
 
 ### 🍕 Food Menu
-![Foodie Menu](images/menu.png)
-
-### 🛒 Shopping Cart
-![Shopping Cart](images/cart.png)
+![Foodie Menu](images/menu.png.png)
 
 ### 📦 Checkout
-![Checkout](images/checkout.png)
+![Foodie Checkout](images/checkout.png.png)
 ---
 
 ## 🔮 Future Improvements
