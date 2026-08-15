@@ -27,7 +27,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <button class="cart-btn" onclick="toggleCart()">
+         <button class="cart-btn" onclick="toggleCart()">
     🛒 Cart <span id="cart-count">0</span>
 </button>
         </nav>
@@ -76,25 +76,7 @@
         <h2>
             Popular Dishes
         </h2>
-        <!-- Search Bar -->
-<div class="search-box">
-    <input
-        type="text"
-        id="searchInput"
-        placeholder="Search your favorite food..."
-        onkeyup="searchFood()">
-</div>
-
-<!-- Categories -->
-<div class="categories">
-
-    <button onclick="filterFood('all')">All</button>
-    <button onclick="filterFood('pizza')">Pizza</button>
-    <button onclick="filterFood('burger')">Burger</button>
-    <button onclick="filterFood('noodles')">Noodles</button>
-    <button onclick="filterFood('chicken')">Chicken</button>
-
-</div>
+        
         <!-- Search Bar -->
 <div class="search-box">
     <input
@@ -137,9 +119,13 @@
     <div class="food-image">
         <img src="./images/pizza.jpg" alt="Pizza">
     </div>
-
+<span class="food-badge">POPULAR</span>
     <h3>Pizza</h3>
 
+<div class="food-rating">
+    ⭐⭐⭐⭐⭐
+    <span>4.8</span>
+</div>
     <p>
         Cheese pizza with fresh vegetables.
     </p>
@@ -153,7 +139,9 @@
         </button>
 
     </div>
-
+<button class="favorite-btn" onclick="toggleFavorite(this)">
+    ♡
+</button>
 </div>
 
 
@@ -163,8 +151,12 @@
     <div class="food-image">
     <img src="./images/burger.jpg" alt="Burger">
 </div>
-
+<span class="food-badge">BEST SELLER</span>
     <h3>Burger</h3>
+    <div class="food-rating">
+    ⭐⭐⭐⭐⭐
+    <span>4.7</span>
+</div>
 
     <p>
         Juicy burger with fresh vegetables.
@@ -179,7 +171,9 @@
         </button>
 
     </div>
-
+<button class="favorite-btn" onclick="toggleFavorite(this)">
+    ♡
+</button>
 </div>
 
 
@@ -192,8 +186,13 @@
                 <div class="food-image">
     <img src="./images/noodles.jpg" alt="Noodles">
 </div>
+<span class="food-badge">POPULAR</span>
                 <h3>Noodles</h3>
 
+<div class="food-rating">
+    ⭐⭐⭐⭐⭐
+    <span>4.6</span>
+</div>
                 <p>
                     Delicious spicy vegetable noodles.
                 </p>
@@ -207,7 +206,9 @@
                     </button>
 
                 </div>
-
+<button class="favorite-btn" onclick="toggleFavorite(this)">
+    ♡
+</button>
             </div>
 
 
@@ -217,8 +218,12 @@
                 <div class="food-image">
     <img src="./images/chicken.jpg" alt="Chicken">
 </div>
-
+<span class="food-badge">CHEF'S CHOICE</span>
                 <h3>Chicken</h3>
+               <div class="food-rating">
+    ⭐⭐⭐⭐⭐
+    <span>4.9</span>
+</div> 
 
                 <p>
                     Crispy and delicious chicken.
@@ -233,7 +238,9 @@
                     </button>
 
                 </div>
-
+<button class="favorite-btn" onclick="toggleFavorite(this)">
+    ♡
+</button>
             </div>
 
         </div>
